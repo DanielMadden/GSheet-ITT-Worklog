@@ -22,7 +22,7 @@ function updateSummary() {
 
   function getData() {
     sheets.forEach((sheet) => {
-      if (sheet.getName() == "Summary") return;
+      if (sheet.getName().includes("Summary")) return;
 
       // Get month number and week range as strings
       let sheetName = sheet.getName();

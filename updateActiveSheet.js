@@ -10,12 +10,7 @@ let startingStatsCanvasRow = 6;
 let startingStatsRow = 7;
 
 function updateActiveSheet() {
-  if (
-    sheetName.includes("Summary") ||
-    sheetName == "📈 Summary" ||
-    sheetName == "Template"
-  )
-    return;
+  if (sheetName.includes("Summary") || sheetName == "Template") return;
   let stats = calculateStats();
   let currentRow = startingStatsRow;
   sheet.getRange("A" + startingStatsCanvasRow + ":C100").setValue("");
